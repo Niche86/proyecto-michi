@@ -2,77 +2,53 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Tu resultado! - {{ gato.nombre }}</title>
+    <title>Tu resultado - {{ gato.nombre }}</title>
     <style>
-        * { box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            margin: 0;
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
             padding: 20px;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .resultado-card {
-            max-width: 500px;
-            width: 100%;
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
             text-align: center;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+            background-color: #f0f0f0;
         }
-        .resultado-titulo {
-            font-size: 1.3em;
-            color: #666;
-            margin-bottom: 10px;
+        .card {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 30px;
+            margin-top: 30px;
         }
-        .gato-nombre {
-            font-size: 2.2em;
+        h1 {
             color: #333;
-            margin-bottom: 20px;
         }
-        .gato-img {
+        img {
             max-width: 100%;
-            border-radius: 12px;
-            margin-bottom: 20px;
+            height: auto;
+            margin: 20px 0;
         }
-        .gato-desc {
-            font-size: 1.1em;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .btn-volver {
+        a {
             display: inline-block;
-            padding: 14px 32px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 10px 20px;
+            background-color: #4CAF50;
             color: white;
             text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 1em;
-            transition: transform 0.2s;
         }
-        .btn-volver:hover {
-            transform: translateY(-2px);
+        a:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <div class="resultado-card">
-        <div class="resultado-titulo">¡Eres...</div>
-        <h1 class="gato-nombre">{{ gato.nombre }}! 🐱</h1>
-        
+    <div class="card">
+        <h2>Eres...</h2>
+        <h1>{{ gato.nombre }}</h1>
+
         {% load static %}
-        <img src="{% static gato.imagen %}" alt="{{ gato.nombre }}" class="gato-img">
-        
-        <p class="gato-desc">{{ gato.descripcion }}</p>
-        
-        <a href="{% url 'index' %}" class="btn-volver">Hacer el test otra vez ↺</a>
+        <img src="{% static gato.imagen %}" alt="{{ gato.nombre }}">
+
+        <p>{{ gato.descripcion }}</p>
+
+        <a href="{% url 'index' %}">Hacer el test otra vez</a>
     </div>
 </body>
 </html>
