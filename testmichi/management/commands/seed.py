@@ -9,21 +9,21 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         # Crear gatos
         gatos_data = [
-            {"nombre": "Keyboard Cat", "descripcion": "El chambeador. Resuelve rápido sin drama.", "imagen": "testmichi/gifs/keyboard-cat.gif"},
-            {"nombre": "Crying Cat", "descripcion": "El estresado. Todo le sale mal.", "imagen": "testmichi/gifs/crying-cat.gif"},
-            {"nombre": "This is Fine Cat", "descripcion": "El optimista. Ignora el caos.", "imagen": "testmichi/gifs/this-is-fine-cat.gif"},
-            {"nombre": "Loading Cat", "descripcion": "El confundido. Procesando... pantalla azul mental.", "imagen": "testmichi/gifs/loading-cat.gif"},
-            {"nombre": "Lazy Cat", "descripcion": "El procrastinador. 'Eso se hace mañana'.", "imagen": "testmichi/gifs/lazy-cat.gif"},
+            {"nombre": "el chambas", "descripcion": "El chambeador. Resuelve rápido sin drama.", "imagen": "testmichi/gifs/keyboard-cat.gif"},
+            {"nombre": "El Lloricas", "descripcion": "El estresado. Todo le sale mal.", "imagen": "testmichi/gifs/crying-cat.gif"},
+            {"nombre": "Ta bien", "descripcion": "El optimista. Ignora el caos.", "imagen": "testmichi/gifs/this-is-fine-cat.gif"},
+            {"nombre": "error de capa 8", "descripcion": "El confundido. Procesando... pantalla azul mental.", "imagen": "testmichi/gifs/loading-cat.gif"},
+            {"nombre": "A colombia la esta matando la pereza", "descripcion": "El procrastinador. 'Eso se hace mañana'.", "imagen": "testmichi/gifs/lazy-cat.gif"},
         ]
 
         for g in gatos_data:
             Gato.objects.get_or_create(nombre=g["nombre"], defaults=g)
 
-        gato_kb = Gato.objects.get(nombre="Keyboard Cat")
-        gato_cc = Gato.objects.get(nombre="Crying Cat")
-        gato_tif = Gato.objects.get(nombre="This is Fine Cat")
-        gato_lc = Gato.objects.get(nombre="Loading Cat")
-        gato_lz = Gato.objects.get(nombre="Lazy Cat")
+        gato_kb = Gato.objects.get(nombre="el chambas")
+        gato_cc = Gato.objects.get(nombre="El Lloricas")
+        gato_tif = Gato.objects.get(nombre="Ta bien")
+        gato_lc = Gato.objects.get(nombre="error de capa 8")
+        gato_lz = Gato.objects.get(nombre="A colombia la esta matando la pereza")
 
         preguntas_data = [
             {

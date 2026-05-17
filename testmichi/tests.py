@@ -6,11 +6,11 @@ from testmichi.models import Gato, Pregunta, Respuesta
 
 class TestVistaTest(TestCase):
     def setUp(self):
-        self.gato_kb = Gato.objects.create(nombre="Keyboard Cat", descripcion="Chambeador", imagen="kb.gif")
-        self.gato_cc = Gato.objects.create(nombre="Crying Cat", descripcion="Estresado", imagen="cc.gif")
-        self.gato_tif = Gato.objects.create(nombre="This is Fine Cat", descripcion="Optimista", imagen="tif.gif")
-        self.gato_lc = Gato.objects.create(nombre="Loading Cat", descripcion="Confundido", imagen="lc.gif")
-        self.gato_lz = Gato.objects.create(nombre="Lazy Cat", descripcion="Procrastinador", imagen="lz.gif")
+        self.gato_kb = Gato.objects.create(nombre="el chambas", descripcion="Chambeador", imagen="kb.gif")
+        self.gato_cc = Gato.objects.create(nombre="El Lloricas", descripcion="Estresado", imagen="cc.gif")
+        self.gato_tif = Gato.objects.create(nombre="Ta bien", descripcion="Optimista", imagen="tif.gif")
+        self.gato_lc = Gato.objects.create(nombre="error de capa 8", descripcion="Confundido", imagen="lc.gif")
+        self.gato_lz = Gato.objects.create(nombre="A colombia la esta matando la pereza", descripcion="Procrastinador", imagen="lz.gif")
 
         self.pregunta = Pregunta.objects.create(texto="Pregunta de prueba", orden=1)
         self.respuesta1 = Respuesta.objects.create(pregunta=self.pregunta, texto="Opcion A", gato=self.gato_kb)
