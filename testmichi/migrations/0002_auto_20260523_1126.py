@@ -12,7 +12,7 @@ def seed_data(apps, schema_editor):
         {"nombre": "El Lloricas", "descripcion": "El estresado. Todo le sale mal.", "imagen": "testmichi/gifs/crying-cat.gif"},
         {"nombre": "Ta bien", "descripcion": "El optimista. Ignora el caos.", "imagen": "testmichi/gifs/this-is-fine-cat.gif"},
         {"nombre": "error de capa 8", "descripcion": "El confundido. Procesando... pantalla azul mental.", "imagen": "testmichi/gifs/loading-cat.gif"},
-        {"nombre": "A colombia la esta matando la pereza", "descripcion": "El procrastinador. 'Eso se hace manana'.", "imagen": "testmichi/gifs/lazy-cat.gif"},
+        {"nombre": "A colombia la esta matando la pereza", "descripcion": "El procrastinador. 'Eso se hace mañana'.", "imagen": "testmichi/gifs/lazy-cat.gif"},
     ]
 
     gato_objs = {}
