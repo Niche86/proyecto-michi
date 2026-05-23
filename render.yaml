@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: proyecto-michi
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn michiproject.wsgi:application"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.6
